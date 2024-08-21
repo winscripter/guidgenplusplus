@@ -1,2 +1,2 @@
 # guidgenplusplus
-A tiny WPF application that can generate up to 10 various GUIDs
+A tiny WPF application that can generate up to 10 various GUIDs. Inspired by GuidGen.exe Visual Studio utility.

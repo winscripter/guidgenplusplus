@@ -12,4 +12,5 @@ perform some tasks that guidgen.exe in Visual Studio can't. For instance, better
 # Why?
 Just because it has a few more GUID types that I definitely needed to be auto-generated.
 
-I believe this first release will also be the last one. I think this program has everything a normal GUID generator needs.
+I believe this first release will also be the last one. I think this program has everything a normal GUID generator needs. After all, I only wrote it
+to suit my needs, but thought that making it open-source might be a good idea.

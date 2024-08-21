@@ -1,0 +1,76 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush Color="#313131" x:Key="SelectGuidBoxBackground" />
+    <SolidColorBrush Color="#242424" x:Key="MainViewBackground" />
+    <SolidColorBrush Color="#bfbfbf" x:Key="MainViewForeground" />
+    <SolidColorBrush Color="#393939" x:Key="SelectGuidBoxElementBackground" />
+    <SolidColorBrush Color="#bfbfbf" x:Key="SelectGuidBoxElementForeground" />
+
+    <SolidColorBrush Color="#FF3F3F46" x:Key="CommonControlButtonB" />
+    <SolidColorBrush Color="#FFF1F1F1" x:Key="CommonControlButtonF" />
+    <SolidColorBrush Color="#FF555555" x:Key="CommonControlButtonBdr" />
+    <SolidColorBrush Color="#FF007ACC" x:Key="CommonControlButtonBdrDef" />
+    <SolidColorBrush Color="#FF3F3F46" x:Key="CommonControlButtonBdrDisabled" />
+    <SolidColorBrush Color="#FF0097FB" x:Key="CommonControlButtonBdrFocused" />
+    <SolidColorBrush Color="#FF0097FB" x:Key="CommonControlButtonBdrHovered" />
+    <SolidColorBrush Color="#FF007ACC" x:Key="CommonControlButtonBdrPressed" />
+    <SolidColorBrush Color="#FF007ACC" x:Key="CommonControlButtonDefaultF" />
+    <SolidColorBrush Color="#FF3F3F46" x:Key="CommonControlButtonDefaultB" />
+    <SolidColorBrush Color="#FF656565" x:Key="CommonControlButtonDisabledF" />
+    <SolidColorBrush Color="#FF2D2D30" x:Key="CommonControlButtonDisabledB" />
+    <SolidColorBrush Color="#FFF1F1F1" x:Key="CommonControlButtonFocusedF" />
+    <SolidColorBrush Color="#FF3F3F46" x:Key="CommonControlButtonFocusedB" />
+    <SolidColorBrush Color="#FFF1F1F1" x:Key="CommonControlButtonHoveredF" />
+    <SolidColorBrush Color="#FF3F3F46" x:Key="CommonControlButtonHoveredB" />
+    <SolidColorBrush Color="#FFF1F1F1" x:Key="CommonControlButtonPressedF" />
+    <SolidColorBrush Color="#FF007ACC" x:Key="CommonControlButtonPressedB" />
+
+    <SolidColorBrush Color="#FFCFD6E5" x:Key="MenuItemForeground" />
+    <SolidColorBrush Color="#FFCFD6E5" x:Key="MenuItemBackground" />
+    <SolidColorBrush Color="#808080" x:Key="MenuItemDisabledForeground" />
+
+    <!-- End Of Spare Colors -->
+
+    <Geometry x:Key="DownArrow">M 0,0 L 3.5,4 L 7,0 Z</Geometry>
+    <Geometry x:Key="UpArrow">M 0,4 L 3.5,0 L 7,4 Z</Geometry>
+    <Geometry x:Key="RightArrow">M 0,0 L 4,3.5 L 0,7 Z</Geometry>
+    <Geometry x:Key="Checkmark">F1M5,11L3,7 5,7 6,9 9,3 11,3 7,11 5,11z</Geometry>
+    <Geometry x:Key="ListUpArrow16x16">M4.999,8L4.999,15 10.999,15 10.999,8 14.999,8 7.999,1 1,8z</Geometry>
+
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Background" Value="{DynamicResource CommonControlButtonB}" />
+        <Setter Property="Foreground" Value="{DynamicResource CommonControlButtonF}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="{DynamicResource CommonControlButtonBdr}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource CommonControlButtonHoveredB}" />
+                <Setter Property="Foreground" Value="{DynamicResource CommonControlButtonHoveredF}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource CommonControlButtonBdrHovered}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{DynamicResource CommonControlButtonPressedB}" />
+                <Setter Property="Foreground" Value="{DynamicResource CommonControlButtonPressedF}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource CommonControlButtonBdrPressed}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="{DynamicResource CommonControlButtonDisabledB}" />
+                <Setter Property="Foreground" Value="{DynamicResource CommonControlButtonDisabledF}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource CommonControlButtonBdrDisabled}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
